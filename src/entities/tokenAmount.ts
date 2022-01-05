@@ -2,7 +2,6 @@ import { CurrencyAmount, Token, BigintIsh } from '@uniswap/sdk-core'
 import invariant from 'tiny-invariant'
 import JSBI from 'jsbi'
 
-
 export class TokenAmount extends CurrencyAmount<Token> {
   public readonly token: Token
 

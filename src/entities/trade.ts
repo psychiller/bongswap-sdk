@@ -246,9 +246,9 @@ export class Trade<TInput extends Currency, TOutput extends Currency, TTradeType
       // pair irrelevant
       if (!pair.token0.equals(amountIn.currency) && !pair.token1.equals(amountIn.currency)) continue
       if (pair.reserve0.equalTo(ZERO) || pair.reserve1.equalTo(ZERO)) continue
-      
+
       console.log(`Pairs where not failing is ${JSON.stringify(pair)}`)
-      
+
       let amountOut: CurrencyAmount<Token>
       try {
         ;[amountOut] = pair.getOutputAmount(amountIn)
